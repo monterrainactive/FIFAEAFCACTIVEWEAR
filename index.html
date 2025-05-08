@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Activefifa</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    /* Blurred background image */
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://en.idei.club/uploads/posts/2023-06/1685597632_en-idei-club-p-fifa-background-dizain-krasivo-1.png') no-repeat center center fixed;
+      background-size: cover;
+      filter: blur(8px); /* Apply blur effect to the background only */
+      z-index: -1; /* Ensure content is above background */
+    }
+    header {
+      background: rgba(255, 20, 147, 0.7); /* Pink color with transparency */
+      padding: 30px 20px;
+      text-align: center;
+      border-bottom: 2px solid white;
+    }
+    header h1 {
+      font-size: 2.2rem;
+      margin: 0;
+      color: white;
+    }
+    header p {
+      margin-top: 10px;
+      color: #f8f8f8;
+    }
+    .content {
+      max-width: 700px;
+      margin: auto;
+      padding: 20px;
+      text-align: center;
+    }
+    .video-container {
+      position: relative;
+      height: 550px;
+      margin-bottom: 40px;
+    }
+    .tiktok-embed {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      margin: 0 auto;
+    }
+    .video-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+    .video-buttons button {
+      background-color: #ff1493;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    .video-buttons button:hover {
+      background-color: #ff69b4;
+    }
+    .get-now-btn {
+      padding: 12px 20px;
+      background-color: #ff1493;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .get-now-btn:hover {
+      background-color: #ff69b4;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="background"></div> <!-- Blurred background image -->
+
+  <header>
+    <h1>Activefifa Mods</h1>
+    <p>Exclusive TikTok FIFA mods — Get started now.</p>
+  </header>
+
+  <div class="content">
+    <div class="video-container">
+      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@userybrz8e2lwf/video/7502119761652763926" data-video-id="7502119761652763926">
+        <section><a href="https://www.tiktok.com/@userybrz8e2lwf">Video 1</a></section>
+      </blockquote>
+
+      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@monterrainactive/video/7495347085894552850" data-video-id="7495347085894552850">
+        <section><a href="https://www.tiktok.com/@monterrainactive">Video 2</a></section>
+      </blockquote>
+
+      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@monterrainactive/video/7495013390289571090" data-video-id="7495013390289571090">
+        <section><a href="https://www.tiktok.com/@monterrainactive">Video 3</a></section>
+      </blockquote>
+
+      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@monterrainactive/video/7494664558653689095" data-video-id="7494664558653689095">
+        <section><a href="https://www.tiktok.com/@monterrainactive">Video 4</a></section>
+      </blockquote>
+    </div>
+
+    <div class="video-buttons">
+      <button onclick="cycleVideos(-1)">← Previous</button>
+      <button onclick="cycleVideos(1)">Next →</button>
+    </div>
+
+   <a href="signup.html">
+  <button class="get-now-btn">Get Now</button>
+</a>
+
+<style>
+  .get-now-btn {
+    padding: 20px 40px; /* Increase padding to make the button larger */
+    font-size: 1.5rem; /* Increase font size */
+    background-color: #ff1493;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 50px; /* Adjust this value to move the button upwards or downwards */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 0.3s ease;
+  }
+
+  .get-now-btn:hover {
+    background-color: #ff69b4;
+  }
+</style>
+
+
+  <script async src="https://www.tiktok.com/embed.js"></script>
+  <script>
+    const embeds = document.querySelectorAll('.tiktok-embed');
+    let index = 0;
+
+    function cycleVideos(direction) {
+      embeds.forEach(embed => embed.style.display = 'none');
+      index = (index + direction + embeds.length) % embeds.length;
+      embeds[index].style.display = 'block';
+    }
+    cycleVideos(0);  // Initially display the first video
+  </script>
+
+</body>
+</html>
